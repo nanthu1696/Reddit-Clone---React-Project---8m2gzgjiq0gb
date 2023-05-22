@@ -42,4 +42,38 @@
   background-color: white;
   width: 700px;
   border-radius: 7px;
+  overflow: auto;
+}
+#inContainer::-webkit-scrollbar {
+  width: 0.1em;
+  background-color: transparent;
+}
+
+#inContainer::-webkit-scrollbar-thumb {
+  background-color: transparent;
+}
+.singlepost {
+  display: flex;
+  height: auto;
+  border: 1px solid black;
+  border-radius: 7px;
+}
+.voteContainer {
+  margin: 20px;
+  height: 80px;
+  width: 80px;
+  display: flex;
+}
+.buttonContainer button {
+  display: block;
+  margin: 5px;
+}
+.buttonContainer span {
+  margin: 15px;
+}
+.postText {
+  margin-top: 20px;
+  overflow-wrap: break-word;
+  width: 555px;
+  height: auto;
 }
