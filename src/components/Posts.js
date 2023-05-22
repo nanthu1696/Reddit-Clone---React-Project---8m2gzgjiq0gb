@@ -1,10 +1,13 @@
 import React from "react";
 import Post from "./Post";
-const Posts = () => {
+const Posts = (props) => {
+  const { data, set } = props;
   return (
     <div id="outContainer">
       <div id="inContainer">
-        <Post />
+        {data.map((post, index) => (
+          <Post data={post} />
+        ))}
       </div>
     </div>
   );
