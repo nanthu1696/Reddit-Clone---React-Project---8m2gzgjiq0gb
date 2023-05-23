@@ -3,7 +3,7 @@ import "boxicons";
 
 const Login = (props) => {
   const users = [{ username: "nanthu16", password: "dorion@96" }];
-  const { set, setlog } = props;
+  const { set, setlog, setUser } = props;
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   function authUser() {
@@ -14,6 +14,7 @@ const Login = (props) => {
     }
     console.log(user[0].password, password);
     if (user[0].password === password) {
+      setUser(user[0].username);
       set(false);
       setlog(true);
     } else {
@@ -37,7 +38,7 @@ const Login = (props) => {
                 onChange={(e) => setUsername(e.target.value)}
                 required
               />
-              <label for="username">Username</label>
+              <label htmlFor="username">Username</label>
             </div>
             <div className="inputbox">
               <box-icon
@@ -51,7 +52,7 @@ const Login = (props) => {
                 onChange={(e) => setPassword(e.target.value)}
                 required
               />
-              <label for="password">Password</label>
+              <label htmlFor="password">Password</label>
             </div>
             <button type="submit" className="btn" onClick={authUser}>
               Log In
