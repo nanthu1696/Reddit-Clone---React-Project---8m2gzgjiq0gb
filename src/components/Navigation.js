@@ -3,9 +3,9 @@ import Login from "./Login";
 import NewPost from "./NewPost";
 
 const Navigation = (props) => {
-  const { log, set } = props;
-  const [page, setPage] = useState(false);
+  const { log, set, setpost, data, page, setPage } = props;
   const [newPost, setNewPost] = useState(false);
+  const [loggeduser, setloggeduser] = useState("");
   return (
     <>
       <div id="navigationbar">
@@ -19,8 +19,15 @@ const Navigation = (props) => {
           <button onClick={() => setPage(true)}>Log in</button>
         )}
       </div>
-      {page && <Login set={setPage} setlog={set} />}
-      {newPost && <NewPost set={setNewPost} />}
+      {page && <Login set={setPage} setlog={set} setUser={setloggeduser} />}
+      {newPost && (
+        <NewPost
+          set={setNewPost}
+          setpost={setpost}
+          user={loggeduser}
+          data={data}
+        />
+      )}
     </>
   );
 };
