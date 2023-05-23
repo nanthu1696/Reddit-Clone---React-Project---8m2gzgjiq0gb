@@ -14,14 +14,6 @@ const App = () => {
           "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
         upVotes: 3,
         downVotes: 1
-      },
-      {
-        postedBy: "Kunal",
-        title: "Random post",
-        postText:
-          "Lorem Ipsum is simply dummy text of the printing and zxzjjy asdhbb asdbjhbajhbkubas khbkubasx typesetting industrydscbsjdbjsbcsdcbsdjcbkjbsdkj cnlskdcnlksdcnsdklnm.",
-        upVotes: 3,
-        downVotes: 1
       }
     ]
   );
