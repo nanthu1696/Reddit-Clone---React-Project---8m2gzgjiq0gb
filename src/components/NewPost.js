@@ -13,6 +13,7 @@ const NewPost = (props) => {
       downVotes: 0
     };
     setpost([...data, obj]);
+    localStorage.setItem("posts", JSON.stringify(data));
     set(false);
   }
   return (
@@ -30,10 +31,10 @@ const NewPost = (props) => {
               onChange={(e) => setTitle(e.target.value)}
               required
             />
-            <label for="title">Title</label>
+            <label htmlFor="title">Title</label>
           </div>
           <div className="textbox">
-            <label for="description">Description:</label>
+            <label htmlFor="description">Description:</label>
             <textarea
               id="myTextArea"
               value={description}
