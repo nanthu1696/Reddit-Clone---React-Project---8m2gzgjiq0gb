@@ -15,8 +15,7 @@ const Post = (props) => {
           const newArray = [...prevArray];
           newArray[index] = {
             ...newArray[index],
-            upVotes: newArray[index].upVotes + 1,
-            downVotes: newArray[index].downVotes - 1
+            upVotes: newArray[index].upVotes + 1
           };
           return newArray;
         });
@@ -46,8 +45,7 @@ const Post = (props) => {
           const newArray = [...prevArray];
           newArray[index] = {
             ...newArray[index],
-            downVotes: newArray[index].downVotes + 1,
-            upVotes: newArray[index].upVotes - 1
+            downVotes: newArray[index].downVotes + 1
           };
           return newArray;
         });
