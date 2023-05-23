@@ -5,24 +5,18 @@ import Posts from "./Posts";
 const App = () => {
   const [isLogged, setIsLogged] = useState(false);
   const [page, setPage] = useState(false);
-  const [posts, setPosts] = useState([
-    {
-      postedBy: "Kunal",
-      title: "Random post",
-      postText:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-      upVotes: 3,
-      downVotes: 1
-    },
-    {
-      postedBy: "Kunal",
-      title: "Random post",
-      postText:
-        "Lorem Ipsum is simply dummy text of the printing and zxzjjy asdhbb asdbjhbajhbkubas khbkubasx typesetting industrydscbsjdbjsbcsdcbsdjcbkjbsdkj cnlskdcnlksdcnsdklnm.",
-      upVotes: 3,
-      downVotes: 1
-    }
-  ]);
+  const [posts, setPosts] = useState(
+    JSON.parse(localStorage.getItem("posts")) || [
+      {
+        postedBy: "Kunal",
+        title: "Random post",
+        postText:
+          "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+        upVotes: 3,
+        downVotes: 1
+      }
+  );
+  console.log(localStorage.getItem("posts"));
   return (
     <div id="main">
       <Navigation
