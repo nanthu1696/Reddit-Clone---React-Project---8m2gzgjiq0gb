@@ -1,20 +1,28 @@
-# boilerplate-react-functional-public
-
-In this app we will be making a Word and Character counter app.
-First there needs to be a <code>textarea</code> element which will take the input
-from user.
-
-Below that element, create 2 divs with id="word-counter" and id="char-counter" respectively.
-#word-counter will show the number of words(empty space is not considered a word) and #char-counter will show the number of characters typed.
-
-Also make an input with id="char-limit-input" which takes a number which is the limit of characters we can type in.
-By default char limit should be 50.
-
-And the last input should be a slider input(with id ="fontSize-input") for taking the font size, default and min value should be 16px and max would be 32px.
-
-Apply the fontSize property to the textarea element.
-
-
-
-Demo video:-
-<video src="https://d3dyfaf3iutrxo.cloudfront.net/general/upload/e449406acecb4a1186ae9cc77a55933f.mp4" controls autoplay muted>
+- **Step 1 Homepage**
+    - Create the homepage which displays recent posts from the users. You can store fake data and display it.
+    - You can store the data in the local storage in the format given below
+    
+    ```jsx
+    const posts = [
+        {
+            postedBy: "Kunal",
+            postText:
+                "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+            upVotes:3,
+    				downVotes:1
+        },
+    ];
+    ```
+    
+    - If the user is not logged he should not be able to upvote or downvote a post.
+- **Step 2 Login Functionality**
+    - Add the login feature to the App (for development purpose you can have a predefined list of usernames and passwords).
+    - You can use the local storage to store the username and passwords.
+    - If the user is logged in he should be able to upvote and downvote a post and also have the option to add a new post.
+- **Step 3  Adding a new post**
+    - A logged is user should be able to add a new post.
+    - A new post should have a title and description and image (which can be optional).
+    - You can store the new posts data in local Storage
+    - User should also be able to upvote and downvote existing posts on the home page
+- **Step 4 Adding upvotes and downvotes to a post**
+    - Every Post should have the feature of upvotes and downvotes which can be clicked by a user only once
