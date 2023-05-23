@@ -17,6 +17,7 @@ const Post = (props) => {
             ...newArray[index],
             upVotes: newArray[index].upVotes + 1
           };
+          localStorage.setItem("posts", JSON.stringify(newArray));
           return newArray;
         });
       } else if (clicks.no === 1) {
@@ -29,6 +30,7 @@ const Post = (props) => {
               upVotes: newArray[index].upVotes + 1,
               downVotes: newArray[index].downVotes - 1
             };
+            localStorage.setItem("posts", JSON.stringify(newArray));
             return newArray;
           });
         }
@@ -47,6 +49,7 @@ const Post = (props) => {
             ...newArray[index],
             downVotes: newArray[index].downVotes + 1
           };
+          localStorage.setItem("posts", JSON.stringify(newArray));
           return newArray;
         });
       } else if (clicks.no === 1) {
@@ -59,6 +62,7 @@ const Post = (props) => {
               downVotes: newArray[index].downVotes + 1,
               upVotes: newArray[index].upVotes - 1
             };
+            localStorage.setItem("posts", JSON.stringify(newArray));
             return newArray;
           });
         }
