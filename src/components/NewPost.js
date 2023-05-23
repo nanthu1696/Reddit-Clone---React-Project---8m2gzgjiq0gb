@@ -12,8 +12,11 @@ const NewPost = (props) => {
       upVotes: 0,
       downVotes: 0
     };
-    setpost([...data, obj]);
-    localStorage.setItem("posts", JSON.stringify(data));
+    setpost((prevArray) => {
+      const newArray = [...prevArray, obj];
+      localStorage.setItem("posts", JSON.stringify(newArray));
+      return newArray;
+    });
     set(false);
   }
   return (
