@@ -2,17 +2,18 @@ import React, { useState, useEffect } from "react";
 import "boxicons";
 
 const Login = (props) => {
-  const users = [{ username: "nanthu16", password: "dorion@96" }];
+  const users = [
+    { username: "admin", password: "admin@123" },
+    { username: "user", password: "user@123" }
+  ];
   const { set, setlog, setUser } = props;
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   function authUser() {
     let user = users.filter((use) => use.username === username);
-    console.log(user);
     if (user.length < 1) {
       return alert("User is not registered");
     }
-    console.log(user[0].password, password);
     if (user[0].password === password) {
       setUser(user[0].username);
       set(false);
